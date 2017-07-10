@@ -25,7 +25,7 @@ SECRET_KEY = 'esdo*q(wc)3t+w^@h1%qydcy^scm*#+p(8w+8se8&w$(r4ut=z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['boluokun.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

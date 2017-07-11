@@ -12,14 +12,12 @@
                 <br/>
                 <div>
                     <p><h2><em>My recent blogs :)<em/></h2></p>
-                    <ul>
-                        {% for post in posts %}
-                            <li>
-                                <a href"">{{ post.title }}</a>
-                                published: {{ post.published_date }}
-                        {% endfor %}
-                            </li>
-                    </ul>
+                    {% for post in posts %}
+                        <h3><a href"">{{ post.title }}</a></h3>
+                        <p>published: {{ post.published_date }}<p>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                        <br/>
+                    {% endfor %}
                 </div>
                 <br/>
                 <div>

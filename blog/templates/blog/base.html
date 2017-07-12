@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Beauty's blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <center>
+            <div class="page-header">
+                <div class="title">
+                    <h1><b><em><a href="/">Welcome to my blog!</a></em></b></h1>
+                </div>
+                <p><strong>Hello! My name is Beauty and, as you probably already guessed, this my blog.</strong></p>
+            </div>
+            <br/>
+
+            <div class="content-container">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <br/>
+            <br/>
+            <footer>
+                <div class="django-acknowlegement">
+                    <p>
+                    This blog was made by using a django girls tutorial. Link to tutorial:
+                    <a href="https://tutorial.djangogirls.org/en/">https://tutorial.djangogirls.org/en/</a>
+                    </p>
+                </div>
+            </footer>
+        </center>
+    </body>
+</html>

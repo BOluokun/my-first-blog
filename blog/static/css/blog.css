@@ -1,0 +1,38 @@
+.title {
+    color: #2A83E8;
+    font-family: 'Lobster';
+}
+
+.post-title {
+    color: #2A83E8;
+    font-family: 'Lobster'
+}
+
+ .page-header {
+     background-color: #B7DEED;
+     margin-top: 0;
+     padding: 20px 20px 20px 40px;
+ }
+
+.recent-blogs {
+    color: #000000;
+    font-family: 'Just Another Hand';
+    font-size: 200%;
+}
+
+.date {
+    color: #242424;
+    font-family: 'Just Another Hand';
+    font-size: 16pt
+}
+
+.post-content {
+    color: #000000;
+    font-family: 'Just Another Hand';
+    font-size: 20pt;
+}
+
+.django-acknowlegement {
+    color: #242424;
+    font-size: 10pt;
+}

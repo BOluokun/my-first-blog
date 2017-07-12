@@ -1,32 +1,25 @@
-<html>
-    <head>
-        <title>Beauty's blog</title>
-    </head>
-    <body>
-        <font face="arial" color="black">
-            <center>
-                <div>
-                    <h1><b><em>Welcome to my blog!</em></b></h1>
-                    <p><strong>Hello! My name is Beauty and, as you probably already guessed, this my blog.</strong></p>
-                </div>
-                <br/>
-                <div>
-                    <p><h2><em>My recent blogs :)<em/></h2></p>
-                    {% for post in posts %}
-                        <h3><a href"">{{ post.title }}</a></h3>
-                        <p>published: {{ post.published_date }}<p>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                        <br/>
-                    {% endfor %}
-                </div>
-                <br/>
-                <div>
-                    <p><font size="1">
-                        This blog was made by using a django girls tutorial. Link to tutorial:
-                        <a href"https://tutorial.djangogirls.org/en/">Django Girls Tutorial</a>
-                    </font></p>
-            </center>
-        </font>
-    </body>
+{% extends 'blog/base.html' %}
 
-</html>
+{% load staticfiles %}
+
+{% block content %}
+    <div class="recent-blogs">
+        <p><h1><em>My recent blogs :)<em/></h1></p>
+    </div>
+
+    {% for post in posts %}
+        <div>
+            <div class="post-title">
+                <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+            </div>
+            <div class="date">
+                <p>published: {{ post.published_date }}<p>
+            </div>
+            <div class="post-content">
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+            <br/>
+        </div>
+    {% endfor %}
+    <br/>
+{% endblock %}

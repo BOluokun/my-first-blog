@@ -17,6 +17,7 @@
             </div>
             <div class="post-content">
                 <p>{{ post.caption|linebreaksbr }}</p>
+                <p><a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comment.count }}</a></p>
             </div>
             <br/>
         </div>

@@ -41,6 +41,11 @@
                     <div class="comment-content">
                         <strong>{{ comment.author }}</strong>
                         <p>{{ comment.text|linebreaks }}</p>
+                        {% if user.is_authenticated and comment.approved_comment %}
+                            <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                        {% else %}
+                            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}

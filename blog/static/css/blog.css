@@ -1,3 +1,7 @@
+.content-container {
+    margin: 0px 50px 25px;
+}
+
 .title {
     color: #2A83E8;
     font-family: 'Lobster';
@@ -17,7 +21,7 @@
 .recent-blogs {
     color: #000000;
     font-family: 'Just Another Hand';
-    font-size: 200%;
+    font-size: 400pt;
 }
 
 .date {
@@ -32,7 +36,7 @@
     font-size: 20pt;
 }
 
-.django-acknowlegement {
+.acknowlegement {
     color: #242424;
     font-size: 10pt;
 }

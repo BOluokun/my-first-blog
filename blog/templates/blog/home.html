@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post-title">
+        <h1>About me<h1>
+    </div>
+    <br/>
+    <div class="post-content">
+        <p>
+            Hi! My name is Beauty and  I'm 14 years old.
+            I live in London and I am in year 10.
+            My favourite things to do are programming, watching youtube videos and eating food (especially jaffa cakes).
+            Also, my favourite subjects are maths, music and computer science.
+            I am currently doing my GCSEs and it's fairly stressful so I hope I can use this blog as a outlet to relieve my stress while,
+            maybe, bringing joy to others.
+        </p>
+    </div>
+    <br/>
+    <div class="post-title">
+        <h2><a href="{% url 'post_list' %}">Click here for my blogs</a></h2>
+    </div>
+{% endblock %}
